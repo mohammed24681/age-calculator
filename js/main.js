@@ -1,4 +1,3 @@
-
 let yearsFeild = document.getElementById("year");
 let monthsField = document.getElementById("month");
 let daysField = document.getElementById("day");
@@ -7,7 +6,7 @@ let result = document.querySelector(".result");
 let calcBtn = document.getElementById("calc-button");
 calcBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  if (yearsFeild.value < new Date().getFullYear() && monthsField.value <= 12 && monthsField.value > 0 && daysField.value <= 31 && daysField.value > 0) {
+  if (yearsFeild.value <= new Date().getFullYear() && monthsField.value <= 12 && monthsField.value > 0 && daysField.value <= 31 && daysField.value > 0) {
     result.innerHTML = `you are <span id="years"></span> years, <span id="months"></span> months and <span id="days"></span> days`;
     let yearsVal = document.getElementById("years");
     let monthsVal = document.getElementById("months");
